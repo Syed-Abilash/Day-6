@@ -1,22 +1,20 @@
-// //1 Question
-// class Movie{
-//     constructor(title , studio , rating=PG){
-//         this.title=title;
-//         this.studio=studio;
-//         this.rating=rating;
-//     }
-//     get ratingMovie(){
-//         return this.rating
-//     }
-// }
-// var Movie1 = new Movie()
-// var Movie2 = new Movie("Casino Royale","Eon Productions","PG13" )
-
-// console.log(Movie1.rating)
-// console.log(Movie2.title);
-// console.log(Movie2.studio);
-// console.log(Movie2.rating);
-
+//1 Question
+class Movie{
+    constructor(title, studio, rating="PG"){
+        this.title=title;
+        this.studio=studio;
+        this.rating=rating;
+    }
+    get ratingMovie(){
+        return this.rating
+    }
+}
+const Movie1 = new Movie("")
+const Movie2 = new Movie("Casino Royale","Eon Productions","PG­13")
+console.log(Movie1.rating);
+console.log(Movie2.title);
+console.log(Movie2.studio);
+console.log(Movie2.rating);
 //2 Question
 class Circle{
     constructor(radius , colour){
@@ -58,14 +56,28 @@ console.log(obj1.areaCircle);
 
 //3 Question 
 class Person{
-    constructor(names , age , gender){
-        this.names=names;
+    constructor(title1 , age , gender){
+        this.title1=title1;
         this.age=age;
         this.gender=gender;
     }
 }
-var Person1 = new Person(syed,23,male)
-
-console.log(Person1.names);
+var Person1 = new Person("syed",23,"male")
+console.log(Person1.title1);
 console.log(Person1.age);
 console.log(Person1.gender);
+
+//4 Question
+class UberPrice{
+    constructor(kilometer,price=50){
+        this.kilometer = kilometer;
+        this.price = price;
+    }
+    get Price(){
+        return this.kilometer*this.price;
+    }
+}
+var uber1 = new UberPrice(5);
+var uber2 = new UberPrice(5,125)
+console.log(uber1.Price);
+console.log(uber2.Price);
